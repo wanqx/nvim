@@ -10,6 +10,8 @@ endif
 " ===
 " === System
 " ===
+" set termguicolors
+set t_Co=256
 set nocompatible
 filetype on
 filetype indent on
@@ -30,18 +32,18 @@ set number
 set ruler
 set cursorline
 syntax enable
-syntax on
 
 " ===
 " === Editor behavior
 " ===
 " Better tab
-set listchars=tab:▸\
 set expandtab
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set list
+set listchars=tab:▸\ ,trail:▫
+
 set scrolloff=5
 
 " Prevent auto line split
@@ -117,6 +119,7 @@ noremap B 5b
 noremap = nzz
 noremap - Nzz
 noremap <LEADER><CR> :nohlsearch<CR>
+inoremap <C-c> <ESC>
 " Copy to system clipboard
 vnoremap Y :w !xclip -i -sel c<CR>
 map si :set nosplitbelow<CR>:split<CR>
@@ -136,7 +139,6 @@ map <right> :vertical resize+5<CR>
 map tk :tabe<CR>
 map tj :-tabnext<CR>
 map tl :+tabnext<CR>
-inoremap <C-c> <ESC>
 " Open the vimrc file anytime
 map <LEADER>rc :e ~/.config/nvim/init.vim<CR>
 " Call figlet
@@ -271,6 +273,7 @@ Plug 'mattn/emmet-vim'
 
 " Python
 Plug 'vim-scripts/indentpython.vim', { 'for' :['python', 'vim-plug'] }
+" Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 " Markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
@@ -295,7 +298,6 @@ Plug 'scrooloose/nerdcommenter' " in <space>cc to comment a line
 Plug 'brooth/far.vim'
 Plug 'tmhedberg/SimpylFold'
 Plug 'kassio/neoterm'
-Plug 'vim-scripts/restore_view.vim'
 
 " Dependencies
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -391,8 +393,8 @@ let g:ncm2#match_highlight = 'mono-space'
 
 
 " Some testing features
-set shortmess+=c
-set notimeout
+" set shortmess+=c
+" set notimeout
 
 
 " ===
@@ -404,8 +406,8 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_color_change_percent = 1
 silent! unmap <LEADER>ig
 autocmd WinEnter * silent! unmap <LEADER>ig
-
-
+hi IndentGuidesOdd  ctermbg=darkgrey
+hi IndentGuidesEven ctermbg=darkgrey
 
 " ===
 " === MarkdownPreview
@@ -416,7 +418,7 @@ let g:mkdp_refresh_slow = 0
 let g:mkdp_command_for_global = 0
 let g:mkdp_open_to_the_world = 0
 let g:mkdp_open_ip = ''
-let g:mkdp_browser = 'chromium'
+let g:mkdp_browser = 'google-chrome-stable'
 let g:mkdp_echo_preview_url = 0
 let g:mkdp_browserfunc = ''
 let g:mkdp_preview_options = {
@@ -502,6 +504,28 @@ let g:SignatureMap = {
 " ===
 let g:undotree_DiffAutoOpen = 0
 map <LEADER>L :UndotreeToggle<CR>
+
+
+" ===
+" === nerdcommenter
+" ===
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+" let g:NERDCompactSexyComs = 1
+
+" Add your own custom formats or override the defaults
+" let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not
+" let g:NERDToggleCheckAllLines = 1
 
 " ==
 " == vim-multiple-cursor

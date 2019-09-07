@@ -223,6 +223,7 @@ Plug 'crusoexia/vim-monokai'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
+Plug 'chxuan/vim-replace'
 
 " Taglist
 Plug 'majutsushi/tagbar', { 'on': 'TagbarOpenAutoClose' }
@@ -337,6 +338,7 @@ let g:lightline = {
 " set statusline+=%{SyntasticStatuslineFlag()}
 " set statusline+=%*
 
+nnoremap <leader>R :ReplaceTo<space>
 
 " ===
 " === NERDTree

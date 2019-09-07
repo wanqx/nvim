@@ -338,6 +338,9 @@ let g:lightline = {
 " set statusline+=%{SyntasticStatuslineFlag()}
 " set statusline+=%*
 
+" vim-replace
+" press rr to replace current word with clipboard
+" press space+R to replace all
 nnoremap <leader>R :ReplaceTo<space>
 
 " ===

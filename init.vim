@@ -477,7 +477,7 @@ let g:ctrlp_prompt_mappings = {
 
 
 " ===
-" === vim-signiture
+" === vim-signature
 " ===
 let g:SignatureMap = {
         \ 'Leader'             :  "m",

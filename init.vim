@@ -225,7 +225,7 @@ map tx :r !figlet
 map <LEADER>rc :e ~/.config/nvim/init.vim<CR>
 
 " Compile function
-map r :call CompileRunGcc()<CR>
+map <C-b> :call CompileRunGcc()<CR>
 func! CompileRunGcc()
   exec "w"
   if &filetype == 'c'
@@ -244,9 +244,9 @@ func! CompileRunGcc()
     ":vsp
     ":vertical resize-10
     :sp
-    :term python3 %
+    :term python %
   elseif &filetype == 'html'
-    exec "!chromium % &"
+    exec "!google-chrome-stable % &"
   elseif &filetype == 'markdown'
     exec "MarkdownPreview"
   endif

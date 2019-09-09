@@ -339,7 +339,7 @@ Plug 'reedes/vim-wordy'
 Plug 'ron89/thesaurus_query.vim'
 
 " Bookmarks
-Plug 'kshenoy/vim-signature'
+" Plug 'kshenoy/vim-signature'
 
 " Other useful utilities
 Plug 'jiangmiao/auto-pairs'
@@ -579,32 +579,32 @@ map <LEADER>tm :TableModeToggle<CR>
 map <C-p> :FZF<CR>
 
 
-" ===
-" === vim-signature
-" ===
-let g:SignatureMap = {
-        \ 'Leader'             :  "m",
-        \ 'PlaceNextMark'      :  "m,",
-        \ 'ToggleMarkAtLine'   :  "m.",
-        \ 'PurgeMarksAtLine'   :  "dm-",
-        \ 'DeleteMark'         :  "dm",
-        \ 'PurgeMarks'         :  "dm/",
-        \ 'PurgeMarkers'       :  "dm?",
-        \ 'GotoNextLineAlpha'  :  "m<LEADER>",
-        \ 'GotoPrevLineAlpha'  :  "",
-        \ 'GotoNextSpotAlpha'  :  "m<LEADER>",
-        \ 'GotoPrevSpotAlpha'  :  "",
-        \ 'GotoNextLineByPos'  :  "",
-        \ 'GotoPrevLineByPos'  :  "",
-        \ 'GotoNextSpotByPos'  :  "mn",
-        \ 'GotoPrevSpotByPos'  :  "mp",
-        \ 'GotoNextMarker'     :  "",
-        \ 'GotoPrevMarker'     :  "",
-        \ 'GotoNextMarkerAny'  :  "",
-        \ 'GotoPrevMarkerAny'  :  "",
-        \ 'ListLocalMarks'     :  "m/",
-        \ 'ListLocalMarkers'   :  "m?"
-        \ }
+" " ===
+" " === vim-signature
+" " ===
+" let g:SignatureMap = {
+        " \ 'Leader'             :  "m",
+        " \ 'PlaceNextMark'      :  "m,",
+        " \ 'ToggleMarkAtLine'   :  "m.",
+        " \ 'PurgeMarksAtLine'   :  "dm-",
+        " \ 'DeleteMark'         :  "dm",
+        " \ 'PurgeMarks'         :  "dm/",
+        " \ 'PurgeMarkers'       :  "dm?",
+        " \ 'GotoNextLineAlpha'  :  "m<LEADER>",
+        " \ 'GotoPrevLineAlpha'  :  "",
+        " \ 'GotoNextSpotAlpha'  :  "m<LEADER>",
+        " \ 'GotoPrevSpotAlpha'  :  "",
+        " \ 'GotoNextLineByPos'  :  "",
+        " \ 'GotoPrevLineByPos'  :  "",
+        " \ 'GotoNextSpotByPos'  :  "mn",
+        " \ 'GotoPrevSpotByPos'  :  "mp",
+        " \ 'GotoNextMarker'     :  "",
+        " \ 'GotoPrevMarker'     :  "",
+        " \ 'GotoNextMarkerAny'  :  "",
+        " \ 'GotoPrevMarkerAny'  :  "",
+        " \ 'ListLocalMarks'     :  "m/",
+        " \ 'ListLocalMarkers'   :  "m?"
+        " \ }
 
 " ===
 " === Undotree

@@ -226,6 +226,7 @@ map <LEADER>rc :e ~/.config/nvim/init.vim<CR>
 
 " Compile function
 map <C-b> :call CompileRunGcc()<CR>
+imap <C-b> <ESC>:call CompileRunGcc()<CR>
 func! CompileRunGcc()
   exec "w"
   if &filetype == 'c'

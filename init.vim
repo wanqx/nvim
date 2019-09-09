@@ -100,9 +100,6 @@ map S :w<CR>
 map <C-s> :w<CR>
 map <C-q> :q<CR>
 
-" Open the vimrc file anytime
-map <LEADER>rc :e ~/.config/nvim/init.vim<CR>
-
 " Open Startify
 map <LEADER>st :Startify<CR>
 

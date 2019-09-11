@@ -402,7 +402,7 @@ let g:airline_mode_map = {
       \ 'c'  : 'Cmd',
       \ 'v'  : 'Vis',
       \ 'V'  : 'Vli',
-      \ '' : 'Vbl',
+      \ '' : 'Vbl',
       \ 's'  : 'S',
       \ 'S'  : 'S',
       \ '' : 'S',

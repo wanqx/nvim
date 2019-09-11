@@ -146,7 +146,6 @@ noremap = nzz
 noremap - Nzz
 noremap <LEADER><CR> :nohlsearch<CR>
 noremap <C-c> <ESC>
-inoremap <C-c> <ESC>
 " Ctrl + j or l will move up/down the view port without moving the cursor
 noremap <C-j> 5<C-y>
 noremap <C-l> 5<C-e>
@@ -490,7 +489,7 @@ set hidden
 set updatetime=300
 "au TextChangedI * GitGutter
 " Installing plugins
-let g:coc_global_extensions = ['coc-word', 'coc-java', 'coc-highlight', 'coc-texlab', 'coc-python', 'coc-vimlsp', 'coc-snippets', 'coc-emmet', 'coc-html', 'coc-json', 'coc-css', 'coc-tsserver', 'coc-yank', 'coc-lists', 'coc-gitignore']
+let g:coc_global_extensions = ['coc-word', 'coc-java', 'coc-highlight', 'coc-r-lsp', 'coc-texlab', 'coc-python', 'coc-vimlsp', 'coc-snippets', 'coc-emmet', 'coc-html', 'coc-json', 'coc-css', 'coc-tsserver', 'coc-yank', 'coc-lists', 'coc-gitignore']
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
   let col = col('.') - 1

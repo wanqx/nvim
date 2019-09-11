@@ -487,7 +487,7 @@ let g:NERDTreeIndicatorMapCustom = {
 "silent! autocmd WinEnter * silent! call silent! timer_start(600, { tid -> execute('unmap if')})
 silent! au BufEnter * silent! unmap if
 set hidden
-set updatetime=300
+set updatetime=1500
 "au TextChangedI * GitGutter
 " Installing plugins
 let g:coc_global_extensions = ['coc-word', 'coc-java', 'coc-highlight', 'coc-texlab', 'coc-python', 'coc-vimlsp', 'coc-snippets', 'coc-emmet', 'coc-html', 'coc-json', 'coc-css', 'coc-tsserver', 'coc-yank', 'coc-lists', 'coc-gitignore']

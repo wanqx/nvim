@@ -148,8 +148,8 @@ noremap <LEADER><CR> :nohlsearch<CR>
 noremap <C-c> <ESC>
 inoremap <C-c> <ESC>
 " Ctrl + j or l will move up/down the view port without moving the cursor
-noremap <C-j> 5<C-y>
-noremap <C-l> 5<C-e>
+noremap <C-j> 10<C-y>
+noremap <C-l> 10<C-e>
 " ===
 " === Window management
 " ===

@@ -1,3 +1,4 @@
 {
-    "suggest.timeout": 5000
+    "suggest.timeout": 5000,
+    "yank.limit": 25
 }

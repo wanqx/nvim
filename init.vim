@@ -502,7 +502,7 @@ inoremap <silent><expr> <Tab>
       \ coc#refresh()
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " Useful commands
-nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<CR>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
@@ -648,7 +648,7 @@ let g:multi_cursor_start_key           = 'g<c-k>'
 let g:multi_cursor_select_all_key      = 'g<a-k>'
 let g:multi_cursor_next_key            = '<c-k>'
 let g:multi_cursor_prev_key            = '<c-p>'
-let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_skip_key            = '<c-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
 
 

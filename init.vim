@@ -147,9 +147,9 @@ noremap - Nzz
 noremap <LEADER><CR> :nohlsearch<CR>
 noremap <C-c> <ESC>
 inoremap <C-c> <ESC>
-" Ctrl + j or l will move up/down the view port without moving the cursor
-noremap <C-j> 10<C-y>
-noremap <C-l> 10<C-e>
+" Ctrl + j close buffer
+noremap <C-j> :bd<CR>
+
 " ===
 " === Window management
 " ===
@@ -386,27 +386,27 @@ let g:monokai_gui_italic = 1
 " === Airline
 " ===
 let g:airline_theme='dracula'
-let g:airline#extensions#coc#enabled = 0
-let g:airline#extensions#branch#enabled = 0
+let g:airline#extensions#coc#enabled = 1
+let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
-let g:airline_mode_map = {
-      \ '__' : '-',
-      \ 'n'  : 'Nor',
-      \ 'i'  : 'Ins',
-      \ 'R'  : 'Rpl',
-      \ 'c'  : 'Cmd',
-      \ 'v'  : 'Vis',
-      \ 'V'  : 'Vli',
-      \ '' : 'Vbl',
-      \ 's'  : 'S',
-      \ 'S'  : 'S',
-      \ '' : 'S',
-      \ }
+" let g:airline_mode_map = {
+      " \ '__' : '-',
+      " \ 'n'  : 'NOR',
+      " \ 'i'  : 'INS',
+      " \ 'R'  : 'RPL',
+      " \ 'c'  : 'CMD',
+      " \ 'v'  : 'VIS',
+      " \ 'V'  : 'VLI',
+      " \ '' : 'VBL',
+      " \ 's'  : 'S',
+      " \ 'S'  : 'S',
+      " \ '' : 'S',
+      " \ }
 
 " set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}

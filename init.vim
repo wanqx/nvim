@@ -1,4 +1,10 @@
-" VIMRC
+"
+" __     _____ __  __ ____   ____ 
+" \ \   / /_ _|  \/  |  _ \ / ___|
+"  \ \ / / | || |\/| | |_) | |    
+"   \ V /  | || |  | |  _ <| |___ 
+"    \_/  |___|_|  |_|_| \_\\____|
+"
 "
 " ===
 " === Auto load for first time uses
@@ -641,7 +647,7 @@ let g:NERDTrimTrailingWhitespace = 1
 " ==
 " == vim-multiple-cursor
 " ==
-let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_use_default_mapping = 0
 let g:multi_cursor_start_word_key      = '<c-k>'
 let g:multi_cursor_select_all_word_key = '<a-k>'
 let g:multi_cursor_start_key           = 'g<c-k>'

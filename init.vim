@@ -23,8 +23,8 @@ endif
 " ===
 " === System
 " ===
-" set termguicolors
-set t_Co=256
+set termguicolors
+" set t_Co=256
 set nocompatible
 
 "set clipboard=unnamed
@@ -252,7 +252,7 @@ func! CompileRunGcc()
     ":vsp
     ":vertical resize-10
     :sp
-    :term python %
+    :term python3 %
   elseif &filetype == 'html'
     exec "!google-chrome-stable % &"
   elseif &filetype == 'markdown'

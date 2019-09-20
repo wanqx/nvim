@@ -260,17 +260,15 @@ func! CompileRunGcc()
   endif
 endfunc
 
-map R :call CompileBuildrrr()<CR>
-func! CompileBuildrrr()
-  exec "w"
-  if &filetype == 'vim'
-    exec "source $MYVIMRC"
-  elseif &filetype == 'markdown'
-    exec "echo"
-  endif
-endfunc
-
-
+" map R :call CompileBuildrrr()<CR>
+" func! CompileBuildrrr()
+  " exec "w"
+  " if &filetype == 'vim'
+    " exec "source $MYVIMRC"
+  " elseif &filetype == 'markdown'
+    " exec "echo"
+  " endif
+" endfunc
 
 " ===
 " === Install Plugins with Vim-Plug
@@ -285,12 +283,14 @@ Plug 'bling/vim-bufferline'
 Plug 'crusoexia/vim-monokai'
 
 " File navigation
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+" Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'chxuan/vim-replace'
+Plug 'rbgrouleff/bclose.vim'
+Plug 'francoiscabrol/ranger.vim'
 
 " Taglist
 Plug 'majutsushi/tagbar', { 'on': 'TagbarOpenAutoClose' }
@@ -423,39 +423,39 @@ let g:airline_right_sep = ''
 " press space+R to replace all
 nnoremap <leader>R :ReplaceTo<space>
 
-" ===
-" === NERDTree
-" ===
-map tt :NERDTreeToggle<CR>
-let NERDTreeMapOpenExpl = ""
-let NERDTreeMapUpdir = "N"
-let NERDTreeMapUpdirKeepOpen = "n"
-let NERDTreeMapOpenSplit = ""
-let NERDTreeMapOpenVSplit = "I"
-let NERDTreeMapActivateNode = "i"
-let NERDTreeMapOpenInTab = "o"
-let NERDTreeMapOpenInTabSilent = "O"
-let NERDTreeMapPreview = ""
-let NERDTreeMapCloseDir = ""
-let NERDTreeMapChangeRoot = "l"
-let NERDTreeMapMenu = ","
-let NERDTreeMapToggleHidden = "zh"
-
-
-" ==
-" == NERDTree-git
-" ==
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ "Unknown"   : "?"
-    \ }
+" " ===
+" " === NERDTree
+" " ===
+" map tt :NERDTreeToggle<CR>
+" let NERDTreeMapOpenExpl = ""
+" let NERDTreeMapUpdir = "N"
+" let NERDTreeMapUpdirKeepOpen = "n"
+" let NERDTreeMapOpenSplit = ""
+" let NERDTreeMapOpenVSplit = "I"
+" let NERDTreeMapActivateNode = "i"
+" let NERDTreeMapOpenInTab = "o"
+" let NERDTreeMapOpenInTabSilent = "O"
+" let NERDTreeMapPreview = ""
+" let NERDTreeMapCloseDir = ""
+" let NERDTreeMapChangeRoot = "l"
+" let NERDTreeMapMenu = ","
+" let NERDTreeMapToggleHidden = "zh"
+"
+"
+" " ==
+" " == NERDTree-git
+" " ==
+" let g:NERDTreeIndicatorMapCustom = {
+    " \ "Modified"  : "✹",
+    " \ "Staged"    : "✚",
+    " \ "Untracked" : "✭",
+    " \ "Renamed"   : "➜",
+    " \ "Unmerged"  : "═",
+    " \ "Deleted"   : "✖",
+    " \ "Dirty"     : "✗",
+    " \ "Clean"     : "✔︎",
+    " \ "Unknown"   : "?"
+    " \ }
 
 " " ===
 " " === NCM2
@@ -565,7 +565,7 @@ let g:mkdp_page_title = '「${name}」'
 " ===
 " === Python-syntax
 " ===
-" let g:python_highlight_all = 1
+let g:python_highlight_all = 1
 " let g:python_slow_sync = 0
 
 
@@ -690,6 +690,10 @@ let g:user_emmet_leader_key='<C-f>'
 " === Bullets.vim
 " ===
 let g:bullets_set_mappings = 0
+
+" VIM-RANGER
+let g:ranger_map_keys = 0
+map R :Ranger<CR>
 
 " Open the _machine_specific.vim file if it has just been created
 if has_machine_specific_file == 0

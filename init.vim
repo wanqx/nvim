@@ -260,15 +260,15 @@ func! CompileRunGcc()
   endif
 endfunc
 
-" map R :call CompileBuildrrr()<CR>
-" func! CompileBuildrrr()
-  " exec "w"
-  " if &filetype == 'vim'
-    " exec "source $MYVIMRC"
-  " elseif &filetype == 'markdown'
-    " exec "echo"
-  " endif
-" endfunc
+map R :call CompileBuildrrr()<CR>
+func! CompileBuildrrr()
+  exec "w"
+  if &filetype == 'vim'
+    exec "source $MYVIMRC"
+  elseif &filetype == 'markdown'
+    exec "echo"
+  endif
+endfunc
 
 " ===
 " === Install Plugins with Vim-Plug
@@ -693,7 +693,7 @@ let g:bullets_set_mappings = 0
 
 " VIM-RANGER
 let g:ranger_map_keys = 0
-map R :Ranger<CR>
+map tt :Ranger<CR>
 
 " Open the _machine_specific.vim file if it has just been created
 if has_machine_specific_file == 0

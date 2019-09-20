@@ -565,7 +565,7 @@ let g:mkdp_page_title = '「${name}」'
 " ===
 " === Python-syntax
 " ===
-let g:python_highlight_all = 1
+" let g:python_highlight_all = 1
 " let g:python_slow_sync = 0
 
 

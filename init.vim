@@ -68,6 +68,7 @@ set inccommand=split
 set ttyfast "should make scrolling faster
 set lazyredraw "same as above
 set visualbell
+syntax enable
 silent !mkdir -p ~/.config/nvim/tmp/backup
 silent !mkdir -p ~/.config/nvim/tmp/undo
 set backupdir=~/.config/nvim/tmp/backup,.

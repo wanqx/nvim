@@ -62,6 +62,7 @@ function! s:h(group, style)
     \ "guisp="   (has_key(a:style, "sp")      ? a:style.sp.gui   : "NONE")
     \ "gui="     (!empty(s:guiformat) ? s:guiformat   : "NONE")
     \ "ctermfg=" . l:ctermfg
+    " \ "ctermbg=" . l:ctermbg
     \ "cterm="   (!empty(s:ctermformat) ? s:ctermformat   : "NONE")
 endfunction
 
@@ -137,7 +138,7 @@ call s:h("DiffChange",    { "fg": s:changefg,   "bg": s:changebg })
 call s:h("DiffText",      { "fg": s:black,      "bg": s:aqua })
 
 " fold
-call s:h("Folded",        { "fg": s:aqua,   "bg": s:darkblack })
+call s:h("Folded",        { "fg": s:warmgrey,   "bg": s:darkblack })
 call s:h("FoldColumn",    {                     "bg": s:darkblack })
 "        Incsearch"
 

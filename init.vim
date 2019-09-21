@@ -23,8 +23,8 @@ endif
 " ===
 " === System
 " ===
-set termguicolors
-" set t_Co=256
+" set termguicolors
+set t_Co=256
 set nocompatible
 
 "set clipboard=unnamed
@@ -327,7 +327,7 @@ Plug 'mhinz/vim-signify'
 Plug 'gisphm/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
 
 " HTML, CSS, JavaScript, PHP, JSON, etc.
-" Plug 'elzr/vim-json'
+Plug 'elzr/vim-json'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'spf13/PIV', { 'for' :['php', 'vim-plug'] }
 Plug 'gko/vim-coloresque', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
@@ -695,6 +695,9 @@ let g:bullets_set_mappings = 0
 " VIM-RANGER
 let g:ranger_map_keys = 0
 map tt :Ranger<CR>
+
+" VIM-JSON compatible
+let g:vim_json_syntax_conceal = 0
 
 " Open the _machine_specific.vim file if it has just been created
 if has_machine_specific_file == 0

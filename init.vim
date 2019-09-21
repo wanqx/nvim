@@ -135,7 +135,8 @@ map <silent> <LEADER>o za
 " 9 key: go to the start of the line
 noremap <silent> 9 0
 " 0 key: go to the end of the line
-noremap <silent> 0 $"
+noremap <silent> 0 $
+
 " Disabling the default s key
 noremap s <nop>
 noremap H I

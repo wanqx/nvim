@@ -155,6 +155,7 @@ noremap <C-c> <ESC>
 inoremap <C-c> <ESC>
 " Ctrl + j close buffer
 noremap <C-j> :bd<CR>
+nnoremap 1 viw
 
 " ===
 " === Window management

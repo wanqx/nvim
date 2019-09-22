@@ -23,8 +23,8 @@ endif
 " ===
 " === System
 " ===
-" set termguicolors
-set t_Co=256
+set termguicolors
+" set t_Co=256
 set nocompatible
 
 "set clipboard=unnamed

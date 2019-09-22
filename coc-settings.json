@@ -1,4 +1,7 @@
 {
     "suggest.timeout": 5000,
-    "yank.limit": 25
+    "list.normalMappings": {
+        "<C-k>": "do:previous",
+        "<C-j>": "do:next"
+    }
 }

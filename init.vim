@@ -155,7 +155,10 @@ noremap <C-c> <ESC>
 inoremap <C-c> <ESC>
 " Ctrl + j close buffer
 noremap <C-j> :bd<CR>
+" 1 to select a word
 nnoremap 1 viw
+" 2 to select string
+nnoremap 2 F"vf"
 
 " ===
 " === Window management
@@ -236,6 +239,11 @@ map <LEADER>rc :e ~/.config/nvim/init.vim<CR>
 inoremap <C-s> <ESC>viwc""<ESC>F"p
 nnoremap <C-s> viwc""<ESC>F"p
 vnoremap <C-s> c""<ESC>F"p
+
+" surround words with ()
+inoremap <C-q> <ESC>viwc()<ESC>F(pF(i
+nnoremap <C-q> viwc()<ESC>F(p
+vnoremap <C-q> c()<ESC>F(pF(i
 
 " Compile function
 map <C-b> :call CompileRunGcc()<CR>

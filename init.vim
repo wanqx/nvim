@@ -155,10 +155,10 @@ noremap <C-c> <ESC>
 inoremap <C-c> <ESC>
 " Ctrl + j close buffer
 noremap <C-j> :bd<CR>
-" 1 to select a word
-nnoremap 1 viw
-" 2 to select string
-nnoremap 2 F"vf"
+" Tab to select a word
+nnoremap <Tab> viw
+" Shift+Tab to select string
+nnoremap <S-Tab> F"vf"
 
 " ===
 " === Window management

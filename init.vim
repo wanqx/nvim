@@ -236,13 +236,15 @@ map tx :r !figlet
 map <LEADER>rc :e ~/.config/nvim/init.vim<CR>
 
 " surround words with "
-inoremap <C-s> <ESC>viwc""<ESC>F"p
-nnoremap <C-s> viwc""<ESC>F"p
+" inoremap <C-s> <ESC>viwc""<ESC>F"p
+" nnoremap <C-s> viwc""<ESC>F"p
 vnoremap <C-s> c""<ESC>F"p
+inoremap <C-s> <ESC>hea"<ESC>hbi"<ESC>e
+nnoremap <C-s> hea"<ESC>hbi"<ESC>e
 
 " surround words with ()
-inoremap <C-q> <ESC>viwc()<ESC>F(pF(i
-nnoremap <C-q> viwc()<ESC>F(p
+inoremap <C-q> <ESC>hea"<ESC>hbi"<ESC>e
+nnoremap <C-q> hea"<ESC>hbi"<ESC>e
 vnoremap <C-q> c()<ESC>F(pF(i
 
 " Compile function
@@ -510,7 +512,7 @@ set hidden
 set updatetime=1500
 "au TextChangedI * GitGutter
 " Installing plugins
-let g:coc_global_extensions = ['coc-word', 'coc-java', 'coc-highlight', 'coc-texlab', 'coc-python', 'coc-vimlsp', 'coc-snippets', 'coc-emmet', 'coc-html', 'coc-json', 'coc-css', 'coc-tsserver', 'coc-yank', 'coc-lists', 'coc-gitignore']
+let g:coc_global_extensions = ['coc-word', 'coc-java', 'coc-highlight', 'coc-python', 'coc-vimlsp', 'coc-snippets', 'coc-emmet', 'coc-html', 'coc-json', 'coc-css', 'coc-tsserver', 'coc-yank', 'coc-lists', 'coc-gitignore']
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
   let col = col('.') - 1

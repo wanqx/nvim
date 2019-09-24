@@ -104,8 +104,6 @@ map ; :
 " Save & quit
 map Q :q<CR>
 map S :w<CR>
-map <C-s> :w<CR>
-map <C-q> :q<CR>
 
 " Open Startify
 map <LEADER>st :Startify<CR>
@@ -233,6 +231,11 @@ map tx :r !figlet
 
 " Open the vimrc file anytime
 map <LEADER>rc :e ~/.config/nvim/init.vim<CR>
+
+" VIM surrounding wrap words with "
+inoremap <C-s> <ESC>viwc""<ESC>F"p
+nnoremap <C-s> viwc""<ESC>F"p
+vnoremap <C-s> c""<ESC>F"p
 
 " Compile function
 map <C-b> :call CompileRunGcc()<CR>

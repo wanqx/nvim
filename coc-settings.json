@@ -2,6 +2,7 @@
     "suggest.timeout": 5000,
     "list.normalMappings": {
         "<C-k>": "do:previous",
-        "<C-j>": "do:next"
+        "<C-j>": "do:next",
+        "<C-c>": "do:exit"
     }
 }

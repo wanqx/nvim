@@ -236,15 +236,15 @@ map tx :r !figlet
 map <LEADER>rc :e ~/.config/nvim/init.vim<CR>
 
 " surround words with "
-" inoremap <C-s> <ESC>viwc""<ESC>F"p
-" nnoremap <C-s> viwc""<ESC>F"p
-inoremap <C-s> <ESC>hea"<ESC>hbi"<ESC>e
-nnoremap <C-s> hea"<ESC>hbi"<ESC>e
+" inoremap <C-s> <ESC>hea"<ESC>hbi"<ESC>e
+" nnoremap <C-s> hea"<ESC>hbi"<ESC>e
+inoremap <C-s> <ESC>ciw""<ESC>F"p
+nnoremap <C-s> ciw""<ESC>F"p
 vnoremap <C-s> c""<ESC>F"p
 
 " surround words with ()
-inoremap <C-q> <ESC>hea"<ESC>hbi"<ESC>e
-nnoremap <C-q> hea"<ESC>hbi"<ESC>e
+inoremap <C-q> <ESC>ciw()<ESC>F(pF(i
+nnoremap <C-q> ciw()<ESC>F(p
 vnoremap <C-q> c()<ESC>F(pF(i
 
 " Compile function

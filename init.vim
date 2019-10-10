@@ -156,7 +156,7 @@ inoremap <C-c> <ESC>
 " Ctrl + j close buffer
 noremap <C-j> :bd<CR>
 " Tab to select a word
-nnoremap <Tab> viw
+nnoremap <C-w> viw
 " Shift+Tab to select string
 nnoremap <S-Tab> F"vf"
 

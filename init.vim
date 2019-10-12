@@ -153,10 +153,10 @@ noremap - Nzz
 noremap <LEADER><CR> :nohlsearch<CR>
 noremap <C-c> <ESC>
 inoremap <C-c> <ESC>
-" Ctrl + j close buffer
-noremap <C-j> :bd<CR>
-" Tab to select a word
-nnoremap <C-w> viw
+" Ctrl + w close buffer
+noremap <C-w> :bd<CR>
+" Ctrl + j to select a word
+nnoremap <C-j> viw
 " Shift+Tab to select string
 nnoremap <S-Tab> F"vf"
 

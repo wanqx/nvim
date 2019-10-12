@@ -154,9 +154,10 @@ noremap <LEADER><CR> :nohlsearch<CR>
 noremap <C-c> <ESC>
 inoremap <C-c> <ESC>
 " Ctrl + w close buffer
-noremap <C-w> :bd<CR>
+noremap <C-w> :bd!<CR>
 " Ctrl + j to select a word
 nnoremap <C-j> viw
+inoremap <C-j> <ESC>viw
 " Shift+Tab to select string
 nnoremap <S-Tab> F"vf"
 
@@ -191,9 +192,9 @@ map <right> :vertical resize+5<CR>
 " ===
 " === Tab management
 " ===
-map <LEADER>. :bn<CR>
-map <LEADER>, :bp<CR>
-map <LEADER><BS> :BufOnly<CR>
+map <F2> :bn<CR>
+map <F3> :bp<CR>
+map <LEADER><BS> :BufOnly!<CR>
 " Create a new tab with tu
 map tu :tabe<CR>
 " Move around tabs with tn and ti

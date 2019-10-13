@@ -249,6 +249,9 @@ inoremap <C-q> <ESC>ciw()<ESC>F(pF(i
 nnoremap <C-q> ciw()<ESC>F(p
 vnoremap <C-q> c()<ESC>F(pF(i
 
+" Tabularize =
+vnoremap <LEADER>= :Tabularize /=<CR>
+
 " Compile function
 map <C-b> :call CompileRunGcc()<CR>
 imap <C-b> <ESC>:call CompileRunGcc()<CR>

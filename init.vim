@@ -155,6 +155,7 @@ noremap <C-c> <ESC>
 inoremap <C-c> <ESC>
 " Ctrl + w close buffer
 noremap <C-w> :bd!<CR>
+noremap <F12> <C-w>
 " Ctrl + j to select a word
 nnoremap <C-j> viw
 inoremap <C-j> <ESC>viw
@@ -165,15 +166,15 @@ nnoremap <S-Tab> F"vf"
 " === Window management
 " ===
 " Use <space> + new arrow keys for moving the cursor around windows
-map <LEADER>w <C-w>w
-map <LEADER>i <C-w>k
-map <LEADER>k <C-w>j
-map <LEADER>j <C-w>h
-map <LEADER>l <C-w>l
+map <LEADER>w <F12>w
+map <LEADER>i <F12>k
+map <LEADER>k <F12>j
+map <LEADER>j <F12>h
+map <LEADER>l <F12>l
 " Place the two screens up and down
-noremap sh <C-w>t<C-w>K
+noremap sh <F12>t<F12>K
 " Place the two screens side by side
-noremap sv <C-w>t<C-w>H
+noremap sv <F12>t<F12>H
 
 " Split window
 map si :set nosplitbelow<CR>:split<CR>

@@ -193,8 +193,8 @@ map <right> :vertical resize+5<CR>
 " ===
 " === Tab management
 " ===
-map <F2> :bn<CR>
-map <F3> :bp<CR>
+map <F2> :bp<CR>
+map <F3> :bn<CR>
 map <LEADER><BS> :BufOnly!<CR>
 " Create a new tab with tu
 map tu :tabe<CR>

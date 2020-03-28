@@ -412,7 +412,7 @@ let g:monokai_gui_italic = 1
 " ===
 " === Airline
 " ===
-let g:airline_theme='dracula'
+let g:airline_theme='luna'
 let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 0

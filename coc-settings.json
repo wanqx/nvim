@@ -1,5 +1,6 @@
 {
     "suggest.timeout": 5000,
+    "python.jediEnabled": true,
     "list.normalMappings": {
         "<C-k>": "do:previous",
         "<C-j>": "do:next",

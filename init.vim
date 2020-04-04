@@ -278,6 +278,7 @@ func! CompileRunGcc()
     ":vertical resize-10
     :sp
     :term python3 %
+    " :term $HOME/.conda/envs/op/bin/python %
   elseif &filetype == 'html'
     exec "!google-chrome-stable % &"
   elseif &filetype == 'markdown'

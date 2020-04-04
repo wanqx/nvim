@@ -1,5 +1,11 @@
 {
     "suggest.timeout": 5000,
+    "python.condaPath": "/opt/anaconda/bin/conda",
+    "python.pythonPath": "/home/xuwanqian/.conda/envs/op/bin/python",
+    "python.linting.enabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Args": ["--ignore=E122,E127,E225,E226,E231,E241,E261,E262,E302,E303,E305,E402,E501,W291,W293,W391"],
     "python.jediEnabled": true,
     "list.normalMappings": {
         "<C-k>": "do:previous",

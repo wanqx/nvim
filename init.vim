@@ -146,6 +146,10 @@ noremap <silent> I 5k
 noremap <silent> K 5j
 noremap <silent> J 5h
 noremap <silent> L 5l
+" noremap <silent> H 5h
+" noremap <silent> K 5k
+" noremap <silent> J 5j
+" noremap <silent> L 5l
 noremap W 5w
 noremap B 5b
 noremap = nzz
@@ -396,8 +400,8 @@ call plug#end()
 " ===
 let has_machine_specific_file = 1
 if empty(glob('~/.config/nvim/_machine_specific.vim'))
-  let has_machine_specific_file = 0
-  silent! exec "!cp ~/.config/nvim/default_configs/_machine_specific_default.vim ~/.config/nvim/_machine_specific.vim"
+    let has_machine_specific_file = 0
+    silent! exec "!cp ~/.config/nvim/default_configs/_machine_specific_default.vim ~/.config/nvim/_machine_specific.vim"
 endif
 source ~/.config/nvim/_machine_specific.vim
 
@@ -412,7 +416,7 @@ let g:monokai_gui_italic = 1
 " ===
 " === Airline
 " ===
-let g:airline_theme='luna'
+let g:airline_theme='dark'
 let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 0
@@ -509,35 +513,58 @@ nnoremap <leader>R :ReplaceTo<space>
 " === coc
 " ===
 " fix the most annoying bug that coc has
-"autocmd WinEnter * call timer_start(1000, { tid -> execute('unmap if')})
-"silent! autocmd BufEnter * silent! call silent! timer_start(600, { tid -> execute('unmap if')})
-"silent! autocmd WinEnter * silent! call silent! timer_start(600, { tid -> execute('unmap if')})
 silent! au BufEnter * silent! unmap if
 set hidden
-set updatetime=1500
+set updatetime=300
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+set signcolumn=yes
 "au TextChangedI * GitGutter
 " Installing plugins
 let g:coc_global_extensions = ['coc-word', 'coc-java', 'coc-highlight', 'coc-texlab', 'coc-python', 'coc-vimlsp', 'coc-snippets', 'coc-emmet', 'coc-html', 'coc-json', 'coc-css', 'coc-tsserver', 'coc-yank', 'coc-lists', 'coc-gitignore']
 " use <tab> for trigger completion and navigate to the next complete item
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
 inoremap <silent><expr> <Tab>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<Tab>" :
       \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+" <c-l> to trigger completion
 inoremap <silent><expr> <C-l> coc#refresh()
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+if has('patch8.1.1068')
+  " Use `complete_info` if your (Neo)Vim version supports it.
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 " Useful commands
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<CR>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-nmap <leader>rn <Plug>(coc-rename)
-nmap <leader>S :CocDisable<CR>
+" nmap <F6> <Plug>(coc-rename)
+nmap <LEADER>S :CocDisable<CR>
+" Use K to show documentation in preview window.
+nnoremap <LEADER>K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Formatting selected code.
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
 
 " " ===
 " " === vim-indent-guide

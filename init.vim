@@ -109,7 +109,7 @@ map S :w<CR>
 map <LEADER>st :Startify<CR>
 
 " Copy to system clipboard
-vnoremap Y :w !xclip -i -sel c<CR>
+vnoremap Y :w !xsel -i -b<CR>
 
 " Indentation
 nnoremap < <<
@@ -522,7 +522,7 @@ set updatetime=300
 set signcolumn=yes
 "au TextChangedI * GitGutter
 " Installing plugins
-let g:coc_global_extensions = ['coc-word', 'coc-java', 'coc-highlight', 'coc-texlab', 'coc-python', 'coc-vimlsp', 'coc-snippets', 'coc-emmet', 'coc-html', 'coc-json', 'coc-css', 'coc-tsserver', 'coc-yank', 'coc-lists', 'coc-gitignore']
+let g:coc_global_extensions = ['coc-word', 'coc-java', 'coc-highlight', 'coc-texlab', 'coc-python', 'coc-vimlsp', 'coc-snippets', 'coc-emmet', 'coc-html', 'coc-json', 'coc-css', 'coc-tsserver', 'coc-yank', 'coc-lists', 'coc-gitignore', 'coc-clangd']
 " use <tab> for trigger completion and navigate to the next complete item
 inoremap <silent><expr> <Tab>
       \ pumvisible() ? "\<C-n>" :

@@ -753,6 +753,9 @@ map tt :Ranger<CR>
 " VIM-JSON compatible
 let g:vim_json_syntax_conceal = 0
 
+" VIM-signify
+let g:signify_skip = {'vcs': { 'allow': ['git'] }}
+
 " Open the _machine_specific.vim file if it has just been created
 if has_machine_specific_file == 0
   exec "e ~/.config/nvim/_machine_specific.vim"

@@ -516,7 +516,7 @@ nnoremap <leader>R :ReplaceTo<space>
 " fix the most annoying bug that coc has
 silent! au BufEnter * silent! unmap if
 set hidden
-set updatetime=300
+set updatetime=100
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 set signcolumn=yes
@@ -535,12 +535,7 @@ function! s:check_back_space() abort
 endfunction
 " <c-l> to trigger completion
 inoremap <silent><expr> <C-l> coc#refresh()
-if has('patch8.1.1068')
-  " Use `complete_info` if your (Neo)Vim version supports it.
-  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-else
-  imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-endif
+inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
@@ -552,8 +547,8 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 " nmap <F6> <Plug>(coc-rename)
 nmap <LEADER>S :CocDisable<CR>
-" Use K to show documentation in preview window.
-nnoremap <LEADER>K :call <SID>show_documentation()<CR>
+" Use <LEADER>+h to show documentation in preview window.
+nnoremap <LEADER>h :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -702,14 +697,14 @@ let g:NERDToggleCheckAllLines = 1
 " ==
 " == vim-multiple-cursor
 " ==
-let g:multi_cursor_use_default_mapping = 0
-let g:multi_cursor_start_word_key      = '<c-k>'
-let g:multi_cursor_select_all_word_key = '<a-k>'
-let g:multi_cursor_start_key           = 'g<c-k>'
-let g:multi_cursor_select_all_key      = 'g<a-k>'
-let g:multi_cursor_next_key            = '<c-k>'
-let g:multi_cursor_prev_key            = '<c-p>'
-let g:multi_cursor_skip_key            = '<c-x>'
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_start_word_key      = 'n'
+let g:multi_cursor_select_all_word_key = '<LEADER>a'
+let g:multi_cursor_start_key           = 'gn'
+let g:multi_cursor_select_all_key      = 'g<LEADER>a'
+let g:multi_cursor_next_key            = 'n'
+let g:multi_cursor_prev_key            = 'm'
+let g:multi_cursor_skip_key            = ','
 let g:multi_cursor_quit_key            = '<Esc>'
 
 
